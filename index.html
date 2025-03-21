@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://kit.fontawesome.com/73d1656528.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -36,11 +36,93 @@
                 <img src="Images/user.png">
             </div>
             <div class="about-cols-2">
-                <h1>About me</h1>
+                <h1 class="sub-title">About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iste sit, quia voluptatibus repudiandae adipisci rem magnam. Praesentium blanditiis id labore ullam recusandae exercitationem! Nihil beatae minus odio dicta nesciunt.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link"onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>    
+                <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/app interfaces</li>
+                    <li><span>Web Developement</span><br>Web app Developement</li>
+                    
+                </ul>
+                </div>
+
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2024</span><br>Done some front end things</li>
+                    </ul>
+                    </div>
+
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2018-2021</span><br>Diploma in CS</li>
+                        <li><span>2023-2025</span><br>Bacholers in CS</li>
+                        
+                    </ul>
+                    </div>
+
             </div>
         </div>
     </div>
 </div> 
+<!-- ----------Services-------------- -->
+<div id="services"> 
+<div class="container">
+    <h1 class="sub-title">My services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestias ipsa porro est eveniet modi necessitatibus? Molestias, necessitatibus? Vero deserunt distinctio assumenda in sequi doloribus quod ipsa quis est similique?
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+      
+      <div>
+        <i class="fa-solid fa-crop"></i>
+        <h2>UI/UX Design</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestias ipsa porro est eveniet modi necessitatibus? Molestias, necessitatibus? Vero deserunt distinctio assumenda in sequi doloribus quod ipsa quis est similique?
+        </p>
+        <a href="#">Learn more</a>
+      </div> 
+
+      <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>App Design</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestias ipsa porro est eveniet modi necessitatibus? Molestias, necessitatibus? Vero deserunt distinctio assumenda in sequi doloribus quod ipsa quis est similique?
+        </p>
+        <a href="#">Learn more</a>
+      </div> 
+
+
+    </div>
+
+</div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
 </body>
 </html>
 <!-----------about------------>
